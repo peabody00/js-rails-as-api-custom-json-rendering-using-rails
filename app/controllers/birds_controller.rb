@@ -4,7 +4,7 @@ class BirdsController < ApplicationController
     # render json: @birds
     # render json: birds, only: [:id, :name, :species]
     render json: birds, except: [:created_at, :updated_at]
-    # The above state is actually this:
+    # The above statement is actually this:
     # render json: birds.to_json(except: [:created_at, :updated_at])
     # This is the magic rails provides in the background
   end
